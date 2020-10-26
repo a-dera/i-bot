@@ -27,7 +27,7 @@ document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (
  
     botui.message.bot({
       delay: 1000,
-      photo: 'build/rasht.png',
+      photo: 'build/rasht.png', //TODO Changer le chemin des images qui doivent obligatoirement être dans le dossier img
       content: "Je suis Ibot..."
     }).then(function () {
       return droits();//droits d'auteurs
@@ -134,7 +134,8 @@ var intégration = function() {
     autres();
 
   } else  {
-    sup1(); // pour les retours (les variables peuvent être mieux nommer!)       
+    sup1(); // pour les retours (les variables peuvent être mieux nommer!)  
+    //TODO Trouver une manière plus adapter de mettre les retours et faire des retours beaucoup plus intuitives     
   }
 });
 }
