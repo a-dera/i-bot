@@ -31,14 +31,14 @@ var visiteur = function() {
       conseils();
   
     }else if(res.value == 'other') {
-      autress();// fonction déjà prise en compte dans "rensenseignementAutres.js"/ //n'est plus pris en compte.
+      autresInfos();// fonction déjà prise en compte dans "rensenseignementAutres.js"/ //n'est plus pris en compte.
   
     } else  {
       sup1();       
     }
   });
   }
-
+/* ---------------------------------------sous section agenda--------------------------*/
   var agenda = function() {
     botui.action.select({
       loading:true,
@@ -80,7 +80,10 @@ var visiteur = function() {
     });
 }
 //les scripts des programmes sont dans le fichier ./build/scripts/programmesSemaines.js
+/* ---------------------------------------fin de la sous section agenda--------------------------*/
 
+
+/* ---------------------------------------sous section conseils--------------------------*/
   var conseils = function() {
     botui.message.add({
       loading: true,
@@ -297,8 +300,10 @@ var visiteur = function() {
    ;
   }
 
-  /* -----autres renseignements------*/
-var autress = function() {
+/* ---------------------------------------fin de la sous section conseils--------------------------*/
+
+/* ---------------------------------------sous section autres infos--------------------------*/
+var autresInfos = function() {
   botui.message.add({
     loading: true,
     delay: 1000,
@@ -325,7 +330,6 @@ var autress = function() {
     })
 }).then(function (res) {
   if(res.value == 'a_propos') {
-    //showReminderInput();
     a_propos();
   } else if(res.value == 'vie_estu') {
     vie_estu();
@@ -338,3 +342,6 @@ var autress = function() {
   }
 });
 }
+// les scripts des autres renseignments sont dans le fichier renseignementAutres.js
+/* ---------------------------------------fin de la sous section autres infos--------------------------*/
+/* ---------------------------------------fin de la section visiteurs--------------------------*/
