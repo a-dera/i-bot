@@ -12,9 +12,9 @@
 */
 var botui = new BotUI('Ibot');
 //les includes
-document.write("<script language='JavaScript' src='build/renstest.js'></script>");
-document.write("<script language='JavaScript' src='build/rensfil.js'></script>");
-document.write("<script language='JavaScript' src='build/rensautres.js'></script>");
+document.write("<script language='JavaScript' src='build/renseignementsTest.js'></script>");
+document.write("<script language='JavaScript' src='build/renseignementFilières.js'></script>");
+document.write("<script language='JavaScript' src='build/renseignementAutres.js'></script>");
 document.write("<script language='JavaScript' src='build/odl.js'></script>");
 document.write("<script language='JavaScript' src='build/flashback.js'></script>");
 document.write("<script language='JavaScript' src='build/search.js'></script>");//pour la recherche
