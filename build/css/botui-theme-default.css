@@ -18,7 +18,7 @@
  padding:7px 13px;
  border-radius:15px;
  color:#595a5a; 
- background-color:#f0aa38 ;/*rgba(206,206,206,.5);*/
+ background-color:#f0aa38 ;/*rgba(206,206,206,.5); couleur initiale*/
 }
  /* a ne pas modifier */
 .botui-message-content.human {
