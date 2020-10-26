@@ -18,7 +18,7 @@ document.write("<script language='JavaScript' src='build/renseignementAutres.js'
 document.write("<script language='JavaScript' src='build/odl.js'></script>");
 document.write("<script language='JavaScript' src='build/flashback.js'></script>");
 document.write("<script language='JavaScript' src='build/search.js'></script>");//pour la recherche
-document.write("<link href='build/bulma.css' rel='stylesheet'>"); // bulma
+document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (similaire à bootstrap) 
 
   botui.message.bot({
     photo: 'build/rasht.png',
@@ -38,7 +38,7 @@ document.write("<link href='build/bulma.css' rel='stylesheet'>"); // bulma
         content: 'Je peux vous aider avec des informations sur l\'IBAM.'
       });
     }).then(function () {
-      return start();
+      return start(); // fonction de démarrage
     });
 
 
@@ -87,14 +87,13 @@ var start = function(){
       })
   }).then(function (res) {
     if(res.value == 'new') {
-      //showReminderInput();
-      intégration();// désire intégrer 
+      intégration();// désire intégrer ibam
     } else if(res.value == 'old') {
      
       visiteur(); // déjà à l'Ibam, mais visite juste le bot pour certaines infos
     } else  {
      
-      recherche();
+      recherche(); // dans le cas d'une recherche rapide
     }
   });
 }
@@ -118,7 +117,7 @@ var intégration = function() {
         value: 'renseignement_filières'
       }, {
         text: 'Autres informations sur l\'Institut',
-        value: 'other'
+        value: 'autres'
       },{
         text: 'Retour',
         icon: 'angle-left',
@@ -127,16 +126,15 @@ var intégration = function() {
     })
 }).then(function (res) {
   if(res.value == 'renseignement_test') {
-    //showReminderInput();
     test();
   } else if(res.value == 'renseignement_filières') {
     filière();
 
-  }else if(res.value == 'other') {
+  }else if(res.value == 'autres') {
     autres();
 
   } else  {
-    sup1();       
+    sup1(); // pour les retours (les variables peuvent être mieux nommer!)       
   }
 });
 }
