@@ -1,5 +1,5 @@
 
-/*------ renseignements filières---*/
+/*------ -------------Section renseignements filières---------*/
 var filière = function() {
 
   botui.message
@@ -14,8 +14,8 @@ botui.action.select({
   action: {
       placeholder : "Choisissez votre filière",
       value: 'MIAGE',
-      searchselect : false, // Default: true, false for standart dropdown
-      label : 'text', // dropdown label variable
+      searchselect : false, 
+      label : 'text', 
       options : [
                       {value: "ABF", text : "ABF" },
                       {value: "ADB", text : "ADB" },
@@ -548,7 +548,6 @@ var filière_miage = function() {
     })
   }).then(function (res) {
   if(res.value == 'débouchés') {
-    //showReminderInput();
     débouchés_miage();
   }else{
     sup2();
@@ -621,7 +620,6 @@ var filière_miage = function() {
           })
         }).then(function (res) {
         if(res.value == 'modules') {
-          //showReminderInput();
           modules_miage();
         }else{
           sup2();
@@ -815,4 +813,4 @@ var filière_mg = function() {
       });
     }
 
-/*-----fin renseignements filières----*/
+/*-----fin section renseignements filières----*/

@@ -1,5 +1,6 @@
 
-/* -----autres renseignements------*/
+/* ----------------------------Section autres informations------*/
+//TODO #3 Remplir toutes les autres sections (conseils, infos sur l'ibam, ) avec des informations vérifiées!
 var autres = function() {
   botui.message.add({
     loading: true,
@@ -27,7 +28,6 @@ var autres = function() {
     })
 }).then(function (res) {
   if(res.value == 'a_propos') {
-    //showReminderInput();
     a_propos();
   } else if(res.value == 'vie_estu') {
     vie_estu();
@@ -257,7 +257,6 @@ var règlement = function() {
     })
 }).then(function (res) {
   if(res.value == 'skip') {
-    //showReminderInput();
     sup6();
   }  else  {
     sup6();       
