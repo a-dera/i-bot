@@ -26,13 +26,12 @@ var visiteur = function() {
       })
   }).then(function (res) {
     if(res.value == 'programme_semaine') {
-      //showReminderInput();
       agenda();
     } else if(res.value == 'conseils') {
       conseils();
   
     }else if(res.value == 'other') {
-      autress();// fonction déjà pirse en compte dans "rensautres.js",, n'est plus pris en compte.
+      autress();// fonction déjà prise en compte dans "rensenseignementAutres.js"/ //n'est plus pris en compte.
   
     } else  {
       sup1();       
@@ -46,7 +45,7 @@ var visiteur = function() {
       delay: 1000,
       action: {
           placeholder : "Choisissez votre filière",
-          value: 'MIAGE', 
+          value: 'MIAGE', // valeur par défaut (miage, bah c'est normal!)
           searchselect : false, 
           label : 'text', 
           options : [
@@ -80,33 +79,7 @@ var visiteur = function() {
       }
     });
 }
-
-  var programme_abf = function() {
-    botui.message.add({
-      loading: true,
-      delay: 1000,
-      photo: 'build/rasht.png',
-      content: "Voici les programmes de ABF cette semaine"
-    }).then(function () {
-      return botui.message
-      .bot({
-        content: '  [![Télécharger](build/acc.png)](build/acc.png)'
-      })
-  });
-
-botui.message
-    .add({
-      delay:1000,
-      content: '  ![Télécharger](build/acc2.png)'
-    });
-botui.message
-  .add({
-    delay:1000,
-    content: '  [![Télécharger](build/acc3.jpg)](build/acc3.jpg)'
-  });
-   
-  }
-
+//les scripts des programmes sont dans le fichier ./build/scripts/programmesSemaines.js
 
   var conseils = function() {
     botui.message.add({
