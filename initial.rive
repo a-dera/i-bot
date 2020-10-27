@@ -642,4 +642,20 @@
 - Try asking your question a different way.
 - Let's change the subject.
 
+// If the user begins a message with "google" it will create
+// a google search link.
++ google *
+- Google Search: <call>google <star></call>
+
+// If the user ends their message with "or something", the
+// bot will simply say "Or something." and drop the topic.
++ * or something
+- Or something.
+
+// Here is the Google search object. We'll cover objects in more
+// depth later in the tutorial.
+> object google javascript
+	var query = escape(args.join(" "));
+	return "<a href=\"http://www.google.com/search?q=" + query + "\">Click Here!</a>";
+< object
 
