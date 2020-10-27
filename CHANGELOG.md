@@ -1,25 +1,23 @@
 # Changelog
 
-All notable changes to this project will be documented in this file, in reverse chronological order by release.
+Tous les changements notables à ce projet seront documentés dans ce fichier, dans l'ordre chronologique inverse par version.
 
-## 0.0.0 - TBD
+## 0.4-beta.8  
 
-### Added
+- Première version publiée.
 
-- Nothing.
+### Changements
 
-### Changed
+- Rien.
 
-- Nothing.
+### Obsolètes
 
-### Deprecated
+- Rien.
 
-- Nothing.
+### Retraits
 
-### Removed
+- Rien.
 
-- Nothing.
+### Corrections
 
-### Fixed
-
-- Nothing.
+- Rien.
