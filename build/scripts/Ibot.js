@@ -12,10 +12,10 @@
 */
 var botui = new BotUI('Ibot');
 //les includes
-document.write("<script language='JavaScript' src='build/scripts/renseignementsTest.js'></script>");
+document.write("<script language='JavaScript' src='build/scripts/renseignementTest.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/renseignementFilières.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/renseignementAutres.js'></script>");
-document.write("<script language='JavaScript' src='build/scripts/odl.js'></script>");
+document.write("<script language='JavaScript' src='build/scripts/anciensEtudiants.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/flashback.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/search.js'></script>");//pour la recherche
 document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (similaire à bootstrap) 

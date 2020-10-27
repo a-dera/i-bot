@@ -1,5 +1,5 @@
 /* ---------------------------------------section de recherche rapide--------------------------*/
-document.write("<script language='JavaScript' src='build/search_test.js'></script>");//recherche sur le test
+document.write("<script language='JavaScript' src='build/scripts/search_test.js'></script>");//recherche sur le test
 var recherche = function() {
     
     test1 = 'test',
