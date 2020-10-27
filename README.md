@@ -17,7 +17,7 @@ _Et pleins d'autres outils_
 
 ## Versions
 **Dernière version stable  :** Pas de version stable pour l'instant! (Coming soon..) <br>
-**Toute dernière version (developpement)  :** 0.0.0 <br>
+**Toute dernière version (developpement)  :** [v.0.4-beta.8](https://github.com/a-dera/i-bot/releases/tag/v.0.4-beta.8)<br>
 Listes des différentes Versions  : [ici](https://github.com/a-dera/i-bot/tags)
 
 
