@@ -19,6 +19,11 @@ var recherche = function() {
           }
         });
       }).then(function (res) {
+        /*récupérer l'entrée de l'utilisateur comme un tableau, et faire des parsing avec des mots clés
+        *si le mot test existe dans le tableau, on renvoi une liste d'action
+        * si le mot test et date existe dans le tableau tous les deux, on renovie une liste d'action 
+        * encore plus précise ( juste la date des test en l'occurence.)
+        */
          if(res.value == test1 || res.value == date2) {
           search_test();
         } else if(res.value == 'filière') {
