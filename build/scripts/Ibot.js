@@ -17,7 +17,7 @@ document.write("<script language='JavaScript' src='build/scripts/renseignementFi
 document.write("<script language='JavaScript' src='build/scripts/renseignementAutres.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/anciensEtudiants.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/flashback.js'></script>");
-document.write("<script language='JavaScript' src='build/scripts/search.js'></script>");//pour la recherche
+document.write("<script language='JavaScript' src='build/scripts/search.js'></script>");//pour la recherche, ne fonctionne pas correctement pour l'instant
 document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (similaire à bootstrap) 
 
   botui.message.bot({
