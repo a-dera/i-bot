@@ -2,22 +2,22 @@
 // adapter ce fochier de sorte à definir nos propres variables et events
 window.bot = null;
 
-function loadTemplate(template) {
-	$("#template").attr("disabled", "disabled");
+function loadTemplate() {
+	//$("#template").attr("disabled", "disabled");
 
 	// Get the template.
 	$.ajax({
-		url: "/try/templates/" + template,
+		url: "initial.rive",
 		dataType: "text",
 		error: function(jqXHR, textStatus, error) {
 			window.alert(error);
-			$("#template").val("");
-			$("#template").removeAttr("disabled", "");
+			//$("#template").val("");
+			//$("#template").removeAttr("disabled", "");
 		},
 		success: function(data, textStatus, jqXHR) {
 			$("#editor").val(data);
-			$("#template").val("");
-			$("#template").removeAttr("disabled", "");
+			//$("#template").val("");
+			//$("#template").removeAttr("disabled", "");
 		}
 	});
 }
@@ -29,9 +29,9 @@ $(document).ready(function() {
 	// Hook up the template selector.
 	/*$("#template").change(function() {
 		var template = $("#template").val();
-		loadTemplate(template);
-	});
-	loadTemplate("rs-standard.rive");*/
+		loadTemplate();
+	});*/
+	loadTemplate();
 
 	// The execute button!
 	$("#execute").click(function() {
