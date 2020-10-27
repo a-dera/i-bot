@@ -1,5 +1,5 @@
 /* RiveScript.com "Try Online" Script */
-// adapter ce fochier de sorte à definir nos propres variables et events
+// adapter ce fichier de sorte à definir nos propres variables et events
 window.bot = null;
 
 function loadTemplate() {
