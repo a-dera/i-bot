@@ -1,69 +1,44 @@
 /*------- ce fichier contient toutes les fonction retours du bot----*/
 
-
-//le first retour, retour au choix new-old
+//TODO Renommer les variables de retour, trouver une solution plus aboutie pour les retours, et merci de commenter chaque section
+//le first retour, retour au choix nouvel etudiant-ancien etudiant
 var sup1 = function(){
- 
   return start();
-
- }
-
+}
 //on est dans intégration et on doit faire le choix entre infos test, filière et autre
 //dans dans chaque choix on peut faire retour, donc retour à fonc intégration  pour refaire un autre choix
- var sup2 = function(){
- 
-    return intégration();
+var sup2 = function(){
+  return intégration();
+}
 
-   }
+var sup3 = function(){
+  return test();
+}
 
+var sup4 = function(){
+  return conseils();
+}
 
-   var sup3 = function(){
- 
-    return test();
+var sup5 = function(){
+  return visiteur();
+} 
 
-   }
-
-
-
-   var sup4 = function(){
- 
-    return conseils();
-
-   }
-
-
-   var sup5 = function(){
- 
-    return visiteur();
-
-   }
+var sup6 = function(){
+  return autres();
+}
+   
+var sup5 = function(){
+  return visiteur();
+}
 
    
-   var sup6 = function(){
- 
-    return autres();
+var sup5 = function(){
+  return visiteur();
+}
 
-   }
-
-   
-   var sup5 = function(){
- 
-    return visiteur();
-
-   }
-
-   
-   var sup5 = function(){
- 
-    return visiteur();
-
-   }
-
-   var supList1= function(){
- 
-    return list1(); // faire les retours vers la liste de choix directement au lieu de refaire apparaitre le texte
-
-   }
+var supList1= function(){
+  return list1(); // faire les retours vers la liste de choix directement au lieu de refaire apparaitre le texte
+}
 
 
 

@@ -107,7 +107,8 @@ var intégration = function() {
     content: "En quoi puis-je donc vous aider?"
   })
   .then(function () {
-    return botui.action.button({
+    return botui.action.button({ 
+      // TODO Trouver des icones pour les boutons
       delay: 1000,
       action: [{
         text: 'Renseignement sur le test',

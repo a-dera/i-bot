@@ -16,7 +16,7 @@ var autres = function() {
         value: 'a_propos'
       }, {
         text: 'Vie estudiantine',
-        value: 'vie_estu'
+        value: 'vie_estudiantine'
       }, {
         text: 'Règlement',
         value: 'règlement'
@@ -29,8 +29,8 @@ var autres = function() {
 }).then(function (res) {
   if(res.value == 'a_propos') {
     a_propos();
-  } else if(res.value == 'vie_estu') {
-    vie_estu();
+  } else if(res.value == 'vie_estudiantine') {
+    vie_estudiantine();
 
   }else if(res.value == 'règlement') {
     règlement();
@@ -41,6 +41,7 @@ var autres = function() {
 });
 }
 
+ /*-------------------A propos-------------------*/
 var a_propos = function() {
   botui.message.add({
     loading: true,
@@ -112,18 +113,17 @@ var organisation = function() {
     })
 }).then(function (res) {
   if(res.value == 'skip') {
-    //showReminderInput();
     sup6();
   }  else  {
     sup6();       
   }
 });
 }
-
-
-var vie_estu = function() {
-  return inge(); 
-  /*botui.message.add({
+/*-------------------fin A propos-------------------*/
+/*-------------------Vie estudiantine-------------------*/
+var vie_estudiantine = function() {
+  //return enCours(); 
+  botui.message.add({
     loading: true,
     delay: 1000,
     photo: 'build/rasht.png',
@@ -206,17 +206,16 @@ var vie_estu = function() {
     })
 }).then(function (res) {
   if(res.value == 'skip') {
-    //showReminderInput();
     sup6();
   }  else if(res.value == 'no') {
-   inge();       
+   enCours();       
   }
 });
-*/}
-
+}
+/*-------------------fin vie estudiantine-------------------*/
+/*-------------------reglement------------------*/
 var règlement = function() {
-  return inge(); 
-  /*
+  //return enCours(); 
   botui.message.add({
     loading: true,
     delay: 1000,
@@ -262,5 +261,5 @@ var règlement = function() {
     sup6();       
   }
 });
-*/}
+}
  
