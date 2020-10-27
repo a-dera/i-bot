@@ -1,4 +1,5 @@
 /* RiveScript.com "Try Online" Script */
+// adapter ce fochier de sorte à definir nos propres variables et events
 window.bot = null;
 
 function loadTemplate(template) {
@@ -26,11 +27,11 @@ $(document).ready(function() {
 	$("#rivescript-version").text("RiveScript-JS version " + new RiveScript().version());
 
 	// Hook up the template selector.
-	$("#template").change(function() {
+	/*$("#template").change(function() {
 		var template = $("#template").val();
 		loadTemplate(template);
 	});
-	loadTemplate("rs-standard.rive");
+	loadTemplate("rs-standard.rive");*/
 
 	// The execute button!
 	$("#execute").click(function() {
@@ -78,7 +79,11 @@ $(document).ready(function() {
 			if (message.length == 0) {
 				return;
 			}
-
+            /**
+            * C'est à partir d'ici que le fichier doit être adapter pour que les 
+            *messages entreer apparaisent avec botui et que les réponse aussi suivent le même principe
+            * ce n'est pas si simple à mettre en place
+            */
 			// Echo the user immediately and clear their input.
 			var $user = $("<div></div>");
 			$user.html('<span class="try-user">User:</span> ' + message);
