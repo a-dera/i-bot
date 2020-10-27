@@ -1,6 +1,6 @@
 /*------- ce fichier contient toutes les fonction retours du bot----*/
 
-//TODO Renommer les variables de retour, trouver une solution plus aboutie pour les retours, et merci de commenter chaque section
+//TODO #7 #6 Renommer les variables de retour, trouver une solution plus aboutie pour les retours, et merci de commenter chaque section
 //le first retour, retour au choix nouvel etudiant-ancien etudiant
 var sup1 = function(){
   return start();

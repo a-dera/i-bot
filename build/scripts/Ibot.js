@@ -108,7 +108,7 @@ var intégration = function() {
   })
   .then(function () {
     return botui.action.button({ 
-      // TODO Trouver des icones pour les boutons
+      // TODO #4 Trouver des icones fontawesome pour les boutons
       delay: 1000,
       action: [{
         text: 'Renseignement sur le test',
