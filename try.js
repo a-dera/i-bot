@@ -36,7 +36,7 @@ $(document).ready(function() {
 	// The execute button!
 	$("#execute").click(function() {
 		// Get their code.
-		var code = $("#editor").val();
+        var code = $("#editor").val();
 		if (code.length == 0) {
 			window.alert("You didn't enter any RiveScript code!");
 			return false;
