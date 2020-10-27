@@ -40,29 +40,22 @@ var supList1= function(){
   return list1(); // faire les retours vers la liste de choix directement au lieu de refaire apparaitre le texte
 }
 
+var enCours = function(){//pour les parties non gérées (pour le moment)
+  Vue.use(Toasted)
+  Vue.toasted.show('Cette option est toujours en cours de dévéloppement!',{
+    theme: "bubble", 
+    position: "bottom-center", 
+    duration : 2000
+  });                            
+  return sup6();
+}
 
 
-   var inge = function(){//pour les parties non gérées (pour le moment)
- 
-    Vue.use(Toasted)
-    Vue.toasted.show('Cette option est toujours en cours de dévéloppement!',{
-      theme: "bubble", 
-      position: "bottom-center", 
-      duration : 2000
-    });
-    //faire en sorte que le toast s'affiche le toast a par ex 3sec 
-                       
-              
-    return sup6();
-   }
-
-
-   var droits = function(){
- 
-    Vue.use(Toasted)
-    Vue.toasted.show('<div class="control"><div class="tags has-addons"><span class="tag is-primary is-light">Ibot</span><span class="tag is-info is-light">V0.4.6</span></div></div><span class="tag is-info is-rounded">Proposé par A. DERA<span>',{
-      theme: "outline", 
-      position: "top-center", 
-      duration : 3000
-    });
-  }
+var droits = function(){
+  Vue.use(Toasted)
+  Vue.toasted.show('<div class="control"><div class="tags has-addons"><span class="tag is-primary is-light">Ibot</span><span class="tag is-info is-light">V0.4.6</span></div></div><span class="tag is-info is-rounded">Proposé par A. DERA<span>',{
+    theme: "outline", 
+    position: "top-center", 
+    duration : 3000
+  });
+}
