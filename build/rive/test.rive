@@ -6,9 +6,9 @@
 - Désolé, je n'ai rien compris du tout.
 
 // Rencontre de 'test' dans la phrase
-+ [*] (test|tests|Tests|TEST|TESTS|) [*]
++ [*] (test|tests) [*]
 - La date du test, les documments du tests,.... 
 
 //toute phrase débutant par 'test'
-+ (test|tests|Tests|TEST|TESTS|) *
++ (test|tests) *
 - La date du test, les documments du tests,.... 
