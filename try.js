@@ -2,7 +2,25 @@
 // adapter ce fichier de sorte à definir nos propres variables et events
 window.bot = null;
 
+function loadTemplate() {
+	//$("#template").attr("disabled", "disabled");
 
+	// Get the template.
+	$.ajax({
+		url: "initial.rive",
+		dataType: "text",
+		error: function(jqXHR, textStatus, error) {
+			window.alert(error);
+			//$("#template").val("");
+			//$("#template").removeAttr("disabled", "");
+		},
+		success: function(data, textStatus, jqXHR) {
+			$("#editor").val(data);
+			//$("#template").val("");
+			//$("#template").removeAttr("disabled", "");
+		}
+	});
+}
 
 $(document).ready(function() {
 	// Show the version number being used.

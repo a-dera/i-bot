@@ -1,14 +1,14 @@
 
 //Fichier de scripts pour les renseignements sur le test
 + *
-- I'm not sure I understand you fully.
-- Please go on.
-- That is interesting. Please continue.
-- Tell me more about that.
-- Does talking about this bother you?
+- Je ne suis pas sûr de bien vous comprendre.
+- Oups, je n'ai pas bien compris.
+- Désolé, je n'ai rien compris du tout.
 
+// Rencontre de 'test' dans la phrase
 + [*] (test|tests|Tests|TEST|TESTS|) [*]
 - La date du test, les documments du tests,.... 
 
+//toute phrase débutant par 'test'
 + (test|tests|Tests|TEST|TESTS|) *
 - La date du test, les documments du tests,.... 
