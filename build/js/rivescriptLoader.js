@@ -9,12 +9,12 @@ function loadTemplate() {
 	$.ajax({
 		url: "initial.rive",
 		dataType: "text",
-		error: function(jqXHR, textStatus, error) {
+		error: function(_jqXHR, _textStatus, error) {
 			window.alert(error);
 			//$("#template").val("");
 			//$("#template").removeAttr("disabled", "");
 		},
-		success: function(data, textStatus, jqXHR) {
+		success: function(data, _textStatus, _jqXHR) {
 			$("#editor").val(data);
 			//$("#template").val("");
 			//$("#template").removeAttr("disabled", "");
