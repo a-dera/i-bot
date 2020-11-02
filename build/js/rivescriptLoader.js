@@ -38,7 +38,7 @@ $(document).ready(function() {
 		// Get their code.
         var code = $("#editor").val();
 		if (code.length == 0) {
-			window.alert("You didn't enter any RiveScript code!");
+			window.alert("Aucune ligne de code trouvée!");
 			return false;
 		}
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
 		window.bot = new RiveScript();
 		window.bot.setHandler("coffeescript", new RSCoffeeScript(window.bot));
 		window.bot.stream(code, function(error) {
-			window.alert("Error in your RiveScript code:\n\n" + error);
+			window.alert("Corriger ces erreurs:\n\n" + error);
 		});
 		window.bot.sortReplies();
 
@@ -86,7 +86,7 @@ $(document).ready(function() {
             */
 			// Echo the user immediately and clear their input.
 			var $user = $("<div></div>");
-			$user.html('<span class="try-user">User:</span> ' + message);
+			$user.html('<span class="try-user">Vous:</span> ' + message);
 			$dialogue.append($user);
 			$message.val("");
 
@@ -96,7 +96,7 @@ $(document).ready(function() {
 
 				// Update the dialogue.
 				var $bot = $("<div></div>");
-				$bot.html('<span class="try-bot">Bot:</span> ' + reply);
+				$bot.html('<span class="try-bot">i-bot:</span> ' + reply);
 				$dialogue.append($bot);
 
 				// Scroll to bottom.
