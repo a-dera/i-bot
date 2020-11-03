@@ -22,7 +22,7 @@ document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (
 
   botui.message.bot({
     photo: 'build/rasht.png',
-    content: 'Salutations à vous!'
+    content: 'Salutations à vous 👋!'
   });
  
     botui.message.bot({
@@ -54,7 +54,7 @@ var start = function(){
       return botui.action.button({
         delay: 1000,
         action: [{
-          text: 'Je désire intégrer l\'IBAM',
+          text: 'Je désire intégrer l\'IBAM 😫',
           _icon: 'question',
           get icon() {
             return this._icon;
@@ -64,7 +64,7 @@ var start = function(){
           },
           value: 'new'
         }, {
-          text: 'Je suis déjà étudiant.e de l\'IBAM',
+          text: 'Je suis déjà étudiant.e de l\'IBAM 😎',
           _icon: 'check',
           get icon() {
             return this._icon;
