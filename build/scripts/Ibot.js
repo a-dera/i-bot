@@ -74,7 +74,7 @@ var start = function(){
           },
           value: 'old'
         },{
-          text: 'Recherche rapide',
+          text: 'Recherche rapide ou discuter avec le bot 😊',
           _icon: 'search',
           get icon() {
             return this._icon;
