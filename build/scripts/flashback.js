@@ -53,7 +53,7 @@ var enCours = function(){//pour les parties non gérées (pour le moment)
 
 var droits = function(){
   Vue.use(Toasted)
-  Vue.toasted.show('<div class="control"><div class="tags has-addons"><span class="tag is-primary is-light">Ibot</span><span class="tag is-info is-light">V0.4.6</span></div></div><span class="tag is-info is-rounded">Proposé par A. DERA<span>',{
+  Vue.toasted.show('<div class="control"><div class="tags has-addons"><span class="tag is-primary is-light">Ibot</span><span class="tag is-info is-light">V0.4-beta.8</span></div></div><span class="tag is-info is-rounded">Proposé par A. DERA<span>',{
     theme: "outline", 
     position: "top-center", 
     duration : 3000
