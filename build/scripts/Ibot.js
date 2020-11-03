@@ -22,7 +22,7 @@ document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (
 
   botui.message.bot({
     photo: 'build/rasht.png',
-    content: 'Salutations à vous 👋!'
+    content: 'Salutations à vous 👋!' // TODO Placer des émojis à chaque fois que cela est possible
   });
  
     botui.message.bot({
