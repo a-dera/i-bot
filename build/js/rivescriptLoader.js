@@ -7,7 +7,7 @@ function loadTemplate() {
 
 	// Get the template.
 	$.ajax({
-		url: "initial.rive",
+		url: "../rive/initial.rive",
 		dataType: "text",
 		error: function(_jqXHR, _textStatus, error) {
 			window.alert(error);
@@ -15,7 +15,7 @@ function loadTemplate() {
 			//$("#template").removeAttr("disabled", "");
 		},
 		success: function(data, _textStatus, _jqXHR) {
-			$("#editor").val(data);
+			$("../rive/initial.rive").val(data);
 			//$("#template").val("");
 			//$("#template").removeAttr("disabled", "");
 		}
@@ -31,12 +31,14 @@ $(document).ready(function() {
 		var template = $("#template").val();
 		loadTemplate();
 	});*/
-	loadTemplate();
+	//loadTemplate();
 
 	// The execute button!
 	$("#execute").click(function() {
 		// Get their code.
-        var code = $("#editor").val();
+		// var code = $("#editor").val();
+		var code = $('../rive/init.rive').val();
+		// document.write("<script language='JavaScript' src='rive/initial.rive'></script>").val();
 		if (code.length == 0) {
 			window.alert("Aucune ligne de code trouvée!");
 			return false;
