@@ -1,21 +1,21 @@
 from chatterbot import ChatBot
-chatbot = ChatBot("Ron Obvious")
-
 from chatterbot.trainers import ListTrainer
+import os
 
-conversation = [
-    "Hello",
-    "Hi there!",
-    "How are you doing?",
-    "I'm doing great.",
-    "That is good to hear",
-    "Thank you.",
-    "You're welcome."
-]
+# Create a new chat bot named Charlie
+chatbot = ChatBot('Charlie')
 
 trainer = ListTrainer(chatbot)
 
-trainer.train(conversation)
+trainer.train([
+    "Hi, can I help you?",
+    "Sure, I'd like to book a flight to Iceland.",
+    "Your flight has been booked."
+])
 
-response = chatbot.get_response("Good morning!")
+# Get a response to the input text 'I would like to book a flight.'
+response = chatbot.get_response('I would like to book a flight.')
+
 print(response)
+
+os.system('pau')
