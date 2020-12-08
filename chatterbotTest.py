@@ -18,4 +18,4 @@ response = chatbot.get_response('I would like to book a flight.')
 
 print(response)
 
-os.system('pau')
+os.system('pause')
