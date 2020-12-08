@@ -2,6 +2,11 @@
 
 Tous les changements notables à ce projet seront documentés dans ce fichier, dans l'ordre chronologique inverse par version.
 
+
+## 0.5.0  (la prochaine!)
+
+- Intégration de ChatterBot (Libraire Python)
+
 ## 0.4-beta.9  (la prochaine!)
 
 - Rendre le bot un peu plus smart...
