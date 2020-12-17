@@ -5,15 +5,16 @@ Tous les changements notables à ce projet seront documentés dans ce fichier, d
 
 ## 0.5.0  (la prochaine!)
 
+- Retrait de la libraire JS RiveScript 
 - Intégration de ChatterBot (Libraire Python)
 
-## 0.4-beta.9  (la prochaine!)
+## 0.4-beta.9 
 
 - Rendre le bot un peu plus smart...
 
 ### Changements
 
-- Ajouts de de la libraire JS RiveScript 
+- Ajouts de la libraire JS RiveScript 
 - Configurations de RiveScript
 - Corrections diverses.
 
