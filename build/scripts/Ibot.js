@@ -120,7 +120,7 @@ var intégration = function() {
         text: 'Autres informations sur l\'Institut',
         value: 'autres'
       },{
-        text: 'Retour', //TODO Ajouter le bouton retour à l'accueil à tous les niveaux de retour 
+        text: 'Retour', //TODO #10 Ajouter le bouton ''retour à l'accueil'' à tous les niveaux de retour 
         icon: 'angle-left',
         value: 'skip'
       }]
