@@ -1,10 +1,10 @@
 /* ---------------------------------------section de recherche rapide--------------------------*/
 //cette implémentation n'est aboutie pour le moment
 document.write("<script language='JavaScript' src='build/scripts/search_test.js'></script>");//recherche sur le test
+document.write("<script language='JavaScript' src='build/scripts/words_table.js'></script>");
+
 var rechercher = function() {
     
-    test1 = 'test',
-    date2= 'la date du test',
     botui.message.bot({ 
         loading:true,
         delay: 1000,
@@ -19,28 +19,27 @@ var rechercher = function() {
           }
         });
       }).then(function (res) {
-        /*récupérer l'entrée de l'utilisateur comme un tableau, et faire des parsing avec des mots clés
-        *si le mot test existe dans le tableau, on renvoi une liste d'action
-        * si le mot test et date existe dans le tableau tous les deux, on renovie une liste d'action 
-        * encore plus précise ( juste la date des test en l'occurence.)
-        */
-         if(res.value == test1 || res.value == date2) {
-          search_test();
-        } else if(res.value == 'filière') {
-          fillière();
-      
-        }else if(res.value == 'autres') {
-          autres();
-      
-        } else  {
-         return botui.message.bot({ 
-            delay: 1000,
-            photo: 'build/rasht.png',
-            content: 'Oups, je n\'ai pas bien compris votre recherche'
-          }).then(function () { 
-            return recherche()
-          })      
-        }
+            /*  Utilisation de la fonction split pour
+            ** décomposer les chaines de caractères 
+            ** en mots clés qu'on va ranger dans un 
+            ** tableau et faire des pseudo-recherches 
+            ** ultrarapides et répétées
+            */
+        const mots_cles = res.value.split(' ');
+        //for (words in mots_cles){
+            //if( words.match(/date/g)) {
+            if( mots_cles.find(element => element == 'date')) {    
+            search_test();
+            } else  {
+            return botui.message.bot({ 
+                delay: 1000,
+                photo: 'build/rasht.png',
+                content: 'Oups, je n\'ai pas bien compris votre recherche'
+            }).then(function () { 
+                return rechercher()
+            })      
+            }
+        //} // fin for
       })
       ;
 }
