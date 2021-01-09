@@ -18,7 +18,8 @@ document.write("<script language='JavaScript' src='build/scripts/renseignementAu
 document.write("<script language='JavaScript' src='build/scripts/anciensEtudiants.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/flashback.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/search.js'></script>");//pour la recherche, ne fonctionne pas correctement pour l'instant
-document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (similaire à bootstrap) 
+document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (librairie css hyper cool, mieux que bootstrap) 
+document.write("<script language='JavaScript' src='build/scripts/rechercher.js'></script>");
 
   botui.message.bot({
     photo: 'build/rasht.png',
@@ -93,7 +94,7 @@ var start = function(){
       visiteur(); // déjà à l'Ibam, mais visite juste le bot pour certaines infos
     } else  {
      
-      recherche(); // dans le cas d'une recherche rapide
+      rechercher(); // dans le cas d'une recherche rapide
     }
   });
 }
