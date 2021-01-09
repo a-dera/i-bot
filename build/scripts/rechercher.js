@@ -26,9 +26,11 @@ var rechercher = function() {
             ** ultrarapides et répétées
             */
         const mots_cles = res.value.split(' ');
-        //for (words in mots_cles){
-            //if( words.match(/date/g)) {
-            if( mots_cles.find(element => element == 'date')) {    
+        //for (words in mots_cles){ // cette suggère de placer des mots clés dans des tableaux regroupés par catégories.
+                                    // On parse ensuite le fichier de haut en bas et les tableaux de gauche à droite pour trouver
+                                    // les correspondances.
+            //if( words.match(/date/g)) { // revoir cette approche un peu plus tard (s'avère promoteur)
+            if( mots_cles.find(element => element == 'date')) {    // pour l'instant on fait avec la fonction find()
             search_test();
             } else  {
             return botui.message.bot({ 
