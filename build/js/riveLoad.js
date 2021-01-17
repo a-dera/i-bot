@@ -1,17 +1,9 @@
+RiveScript = require("../../node_modules/rivescript");
 var bot = new RiveScript();
 
-// Load a directory full of RiveScript documents (.rive files). This is for
-// Node.JS only: it doesn't work on the web!
-bot.loadDirectory("brain").then(loading_done).catch(loading_error);
-
 // Load an individual file.
-bot.loadFile("brain/testsuite.rive").then(loading_done).catch(loading_error);
+bot.loadFile("build/rive/test.rive").then(loading_done).catch(loading_error);
 
-// Load a list of files all at once (the best alternative to loadDirectory
-// for the web!)
-bot.loadFile([
-  "../rive/conversations.rive"
-]).then(loading_done).catch(loading_error);
 
 // All file loading operations are asynchronous, so you need handlers
 // to catch when they've finished. If you use loadDirectory (or loadFile
@@ -30,7 +22,7 @@ function loading_done() {
   let username = "local-user";
 
   // NOTE: the API has changed in v2.0.0 and returns a Promise now.
-  bot.reply(username, "Hello, bot!").then(function(reply) {
+  bot.reply(username, "test").then(function(reply) {
     console.log("The bot says: " + reply);
   });
 }
