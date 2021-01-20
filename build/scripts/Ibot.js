@@ -10,7 +10,31 @@
 
 
 */
+/*--------Déclarations des variables - core----*/
 var botui = new BotUI('Ibot');
+
+RiveScript = require("../../node_modules/rivescript");
+var bot = new RiveScript();
+
+// Load an individual file.
+// bot.loadFile("build/rive/test.rive").then(loading_done).catch(loading_error);
+bot.loadFile("build/rive/test.rive").then(loading_done);
+
+
+// All file loading operations are asynchronous, so you need handlers
+// to catch when they've finished. If you use loadDirectory (or loadFile
+// with multiple file names), the success function is called only when ALL
+// the files have finished loading.
+function loading_done() {
+// Now the replies must be sorted!
+bot.sortReplies();
+}
+
+// It's good to catch errors too!
+/*function loading_error(error, filename, lineno) {
+  console.log("Error when loading files: " + error);
+}*/
+/*-------------*fin des déclarations----------*/
 //les includes
 document.write("<script language='JavaScript' src='build/scripts/renseignementTest.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/renseignementFilières.js'></script>");
@@ -19,6 +43,7 @@ document.write("<script language='JavaScript' src='build/scripts/anciensEtudiant
 document.write("<script language='JavaScript' src='build/scripts/flashback.js'></script>");
 document.write("<script language='JavaScript' src='build/scripts/search.js'></script>");//pour la recherche, ne fonctionne pas correctement pour l'instant
 document.write("<link href='build/css/bulma.css' rel='stylesheet'>"); // bulma (similaire à bootstrap) 
+document.write("<script language='JavaScript' src='build/scripts/discuss.js'></script>");
 
   botui.message.bot({
     photo: 'build/rasht.png',
@@ -91,9 +116,9 @@ var start = function(){
     } else if(res.value == 'old') {
      
       visiteur(); // déjà à l'Ibam, mais visite juste le bot pour certaines infos
-    } else  {
+    } else if(res.value == 'recherche') {
      
-      recherche(); // dans le cas d'une recherche rapide
+      discussion(); // dans le cas d'une recherche rapide
     }
   });
 }

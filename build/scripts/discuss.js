@@ -1,10 +1,4 @@
-/* ---------------------------------------section de recherche rapide--------------------------*/
-//cette implémentation n'est aboutie pour le moment
-
-var recherche = function() {
-    
-    test1 = 'test',
-    date2= 'la date du test',
+var discussion = function() {
     botui.message.bot({ 
         loading:true,
         delay: 1000,
@@ -19,40 +13,12 @@ var recherche = function() {
           }
         });
       }).then(function (res) {
-        /*récupérer l'entrée de l'utilisateur comme un tableau, et faire des parsing avec des mots clés
-        *si le mot test existe dans le tableau, on renvoi une liste d'action
-        * si le mot test et date existe dans le tableau tous les deux, on renovie une liste d'action 
-        * encore plus précise ( juste la date des test en l'occurence.)
-        */
-         if(res.value == test1 || res.value == date2) {
-          search_test();
-        } else if(res.value == 'filière') {
-          fillière();
-      
-        }else if(res.value == 'autres') {
-          autres();
-      
-        } else  {
-         return botui.message.bot({ 
-            delay: 1000,
-            photo: 'build/rasht.png',
-            content: 'Oups, je n\'ai pas bien compris votre recherche'
-          }).then(function () { 
-            return recherche()
-          })      
-        }
-      })
-      ;
+      // NOTE: the API has changed in v2.0.0 and returns a Promise now.
+            bot.reply(res).then(function(reply) {
+                console.log("The bot says: " + reply);
+            });    
+      });
 }
-/*   
-
- 
-		o-o   o--o o--o    O  
-		|  \  |    |   |  / \ 
-		|   O O-o  O-Oo  o---o
-		|  /  |    |  \  |   |    
-		o-o   o--o o   o o   o
 
 
 
-*/
