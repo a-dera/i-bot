@@ -3,3 +3,5 @@ todo.txt
 v0.4-beta.8.zip
 build/css/
 build/img/
+/venv/
+/node_modules/
