@@ -9,5 +9,5 @@ var date_test = [
   "matières du test",
   "matière test",
   "dossier",
-  "dossier de candidature du test",
+  "dossier de candidature du test"
 ];

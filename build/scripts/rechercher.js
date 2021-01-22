@@ -30,21 +30,21 @@ var rechercher = function() {
                                     // On parse ensuite le fichier de haut en bas et les tableaux de gauche à droite pour trouver
                                     // les correspondances.
             //if( words.match(/date/g)) { // revoir cette approche un peu plus tard (s'avère promoteur)
-            var i = 0;
-            while (date_test[i])  { 
-              if( mots_cles.find(element => element == date_test[i])) {    // pour l'instant on fait avec la fonction find()
-              search_test();
-              } else  {
-              return botui.message.bot({ 
-                  delay: 1000,
-                  photo: 'build/rasht.png',
-                  content: 'Oups, je n\'ai pas bien compris votre recherche'
-              }).then(function () { 
-                  return rechercher()
-              })      
+            for (words in mots_cles) {var matches = words.match(date_test);}
+              if (matches.length > 0){
+                search_test();
+              } else {
+                return botui.message
+                  .bot({
+                    delay: 1000,
+                    photo: "build/rasht.png",
+                    content: "Oups, je n'ai pas bien compris votre recherche",
+                  })
+                  .then(function () {
+                    return rechercher();
+                  });
               }
-              i++;
-            } // for loop fetcch_test
+            //} // for loop fetcch_test
         //} // fin for
       })
       ;
